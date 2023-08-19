@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HealthCare Donar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/* ... Your existing styles ... */
+
+/* New Styles for Donation Tracker */
+.donation-card {
+  padding: 16px;
+  margin: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.donation-card h4 {
+  margin-top: 0;
+}
+
+.donation-card p {
+  margin: 8px 0;
+}
+
+.donation-progress {
+  height: 20px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.donation-progress .progress-bar {
+  height: 100%;
+  width: 50%; /* Change this value based on donation progress */
+  background-color: #4caf50;
+  text-align: center;
+  color: #fff;
+  line-height: 20px;
+  border-radius: 10px;
+}
+
+
+
+</style>
+
+<script>
+    function donateNow(projectId) {
+      var donationAmount = parseFloat(prompt("Enter donation amount:"));
+      if (!isNaN(donationAmount)) {
+        var element = document.getElementById(projectId);
+        var offset = element.offsetTop;
+        window.scrollTo(0, offset);
+      }
+    }
+    </script>
+</head>
+<body>
+  <br><br>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="#gallery" class="w3-bar-item w3-button"><i class="fa fa-th"></i> GALLERY</a>
+        <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+        <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+
+<div class="w3-container w3-light-grey" style="padding:30px 16px" id="donations">
+  <h3 class="w3-center">"Healing Lives: Donate for Accessible Healthcare"</h3>
+  
+
+  
+  <div class="donation-card" id="project1">
+    <h4>Hope Giver</h4>
+    <p>Hope Givers shine a light in the fight against cancer, providing support and inspiration to those affected by this challenging journey.</p>
+    <div class="donation-progress">
+      <div class="progress-bar">50%</div>
+    </div>
+    <p><strong>Amount Raised: ₹50000 / ₹100000</strong></p>
+    <p><a href="javascript:void(0);" onclick="donateNow('project1');" class="w3-button w3-black">Donate Now</a></p>
+  </div>
+
+  
+  <div class="donation-card" id="project2">
+    <h4>Courageous Warrior</h4>
+    <p>Join our ranks as a Courageous Warrior, standing beside our cancer patient as they face this battle with resilience and determination.</p>
+    <div class="donation-progress">
+      <div class="progress-bar">30%</div>
+    </div>
+    <p><strong>Amount Raised: ₹30000 / ₹100000</strong></p>
+    <p><a href="javascript:void(0);" onclick="donateNow('project2');" class="w3-button w3-black">Donate Now</a></p>
+  </div>
+
+
+<div class="donation-card" id="project3">
+  <h4>Pain Relief Partner</h4>
+  <p>As a Pain Relief Partner, your donation directly aids in easing our cancer patient's pain and discomfort, making their journey more manageable.</p>
+  <div class="donation-progress">
+    <div class="progress-bar">45%</div>
+  </div>
+  <p><strong>Amount Raised: ₹450000 / ₹1000000</strong></p>
+  <p><a href="javascript:void(0);" onclick="donateNow('project3');" class="w3-button w3-black">Donate Now</a></p>
+</div>
+
+
+
+<div class="donation-card" id="project4">
+  <h4>Transfusion Ally</h4>
+  <p>Become a Transfusion Ally for [Recipient's Name], ensuring they have the essential blood supply required for their medical treatment and recovery. </p>
+  <div class="donation-progress">
+    <div class="progress-bar">75%</div>
+  </div>
+  <p><strong>Amount Raised: ₹750000 / ₹1000000</strong></p>
+  <p><a href="javascript:void(0);" onclick="donateNow('project4');" class="w3-button w3-black">Donate Now</a></p>
+</div>
+</div>
+
+
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+ 
+
+
+</body>
+</html>
