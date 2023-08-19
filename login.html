@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css"> 
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/custom.css"> <!-- Add the path to your custom CSS file -->
+    <title>Document</title>
+</head>
+<body>
+<br>
+<br>
+
+<div class="cont">
+    <div class="form sign-in">
+        <h2>Welcome</h2>
+        <label>
+            <span>Email</span>
+            <input type="email" />
+        </label>
+        <label>
+            <span>Password</span>
+            <input type="password" />
+        </label>
+        <p class="forgot-pass">Forgot password?</p>
+        <button type="button" class="submit">Sign In</button>
+    </div>
+    <div class="sub-cont">
+        <div class="img">
+            <div class="img__text m--up">
+                <h3>Don't have an account? Please Sign up!</h3>
+            </div>
+            <div class="img__text m--in">
+                <h3>If you already have an account, just sign in.</h3>
+            </div>
+            <div class="img__btn">
+                <span class="m--up">Sign Up</span>
+                <span class="m--in">Sign In</span>
+            </div>
+        </div>
+        <div class="form sign-up">
+            <h2>Create your Account</h2>
+            <div class="img__text-boxes">
+                <div class="img__box m--up">
+                    Join Us in Making a Difference: Sign up to Donate
+                </div>
+                <div class="img__box m--in">
+                    Empower Your Impact: Register to Request Donations
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector('.img__btn').addEventListener('click', function() {
+        document.querySelector('.cont').classList.toggle('s--signup');
+    });
+</script>
+</body>
+</html>
