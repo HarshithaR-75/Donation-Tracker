@@ -27,6 +27,34 @@ $(document).ready(function() {
                     }
                 }
             },
+            organization_name: {
+                validators: {
+                  stringLength: {
+                    min:1,
+                  },
+                  notEmpty: {
+                    message: 'Please enter your Organization Name'
+                  }
+                }
+              },
+              about_organization: {
+                validators: {
+                  callback: {
+                    message: 'Please provide information about your organization',
+                    callback: function(value) {
+                      // Count words in the input
+                      var words = value.trim().split(/\s+/).length;
+              
+                      // Maximum allowed words
+                      var maxWords = 600;
+              
+                      return words <= maxWords;
+                    }
+                  }
+                }
+              },
+              
+
 			 user_name: {
                 validators: {
                      stringLength: {
@@ -106,4 +134,8 @@ $(document).ready(function() {
                 window.location.href = 'login.html'; // Replace 'login.html' with your actual login page URL
               }, 'json');
             });
+
 });
+
+
+

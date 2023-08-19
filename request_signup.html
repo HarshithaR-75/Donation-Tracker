@@ -46,8 +46,35 @@
         </div>
       </div>
     </div>
+
     
-    <!-- Text input-->
+
+<!-- Text input -->
+<div class="form-group">
+    <label class="col-md-4 control-label">Organization Name</label>
+    <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
+        <input name="organization_name" placeholder="Organization Name" class="form-control" type="text">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Textarea input -->
+  <div class="form-group">
+    <label class="col-md-4 control-label">About Organization</label>
+    <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign"></i></span>
+        <textarea name="about_organization" placeholder="Tell us about your organization" class="form-control" rows="5"></textarea>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+    
+    
     
     <div class="form-group">
       <label class="col-md-4 control-label">Username</label>  
@@ -89,7 +116,7 @@
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-      <input name="email" id="email" onkeyup="validateEmail(this)" placeholder="E-Mail Address" class="form-control"  type="text">
+      <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
         </div>
       </div>
     </div>
@@ -124,21 +151,5 @@
     </form>
     </div>
         </div><!-- /.container -->
-        <script>
-          function validateEmail(input) {
-            const emailRegex = /^[a-z]+@+gmail.com$/;
-              const message = document.getElementById('email-message');
-  
-              if (emailRegex.test(input.value)) {
-                  input.style.border = '2px solid green';
-                  message.innerText = 'Valid email address';
-                  message.style.color = 'green';
-              } else {
-                  input.style.border = '2px solid red';
-                  message.innerText = 'Invalid email address';
-                  message.style.color = 'red';
-              }
-          }
-      </script>
 </body>
 </html>
