@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Donation Tracker</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/* ... Your existing styles ... */
+
+/* New Styles for Donation Tracker */
+.donation-card {
+  padding: 16px;
+  margin: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.donation-card h4 {
+  margin-top: 0;
+}
+
+.donation-card p {
+  margin: 8px 0;
+}
+
+.donation-progress {
+  height: 20px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.donation-progress .progress-bar {
+  height: 100%;
+  width: 50%; /* Change this value based on donation progress */
+  background-color: #4caf50;
+  text-align: center;
+  color: #fff;
+  line-height: 20px;
+  border-radius: 10px;
+}
+
+.progress-bar
+
+</style>
+
+<script>
+    function donateNow(projectId) {
+      var donationAmount = parseFloat(prompt("Enter donation amount:"));
+      if (!isNaN(donationAmount)) {
+        var element = document.getElementById(projectId);
+        var offset = element.offsetTop;
+        window.scrollTo(0, offset);
+      }
+    }
+    </script>
+</head>
+<body>
+  <br><br>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="#gallery" class="w3-bar-item w3-button"><i class="fa fa-th"></i> GALLERY</a>
+        <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+        <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+<!-- ... Your existing content ... -->
+
+<!-- Donation Tracker Section -->
+<div class="w3-container w3-light-grey" style="padding:30px 16px" id="donations">
+  <h3 class="w3-center">"Empower Minds, Ignite Futures: Donate for Education Enrichment"</h3>
+  <!-- <p class="w3-center w3-large">Track contributions and their impact</p> -->
+
+  <!-- Donation Card: Project 1 -->
+  <div class="donation-card" id="project1">
+    <h4>Scholarship and Financial Aid</h4>
+    <p>Contribute to this category to provide scholarships and financial aid to deserving students. Your donation supports access to quality education for individuals who may otherwise face financial barriers.</p>
+    <div class="donation-progress">
+      <div class="progress-bar">50%</div>
+    </div>
+    <p><strong>Amount Raised: ₹50000 / ₹100000</strong></p>
+    <p><a href="javascript:void(0);" onclick="donateNow('project1');" class="w3-button w3-black">Donate Now</a></p>
+  </div>
+
+  <!-- Donation Card: Project 2 -->
+  <div class="donation-card" id="project2">
+    <h4>Teacher Development and Training</h4>
+    <p>Support programs that enhance teachers' skills and expertise. Your donation can fund professional development, training workshops, and resources for educators.</p>
+    <div class="donation-progress">
+      <div class="progress-bar">30%</div>
+    </div>
+    <p><strong>Amount Raised: ₹30000 / ₹100000</strong></p>
+    <p><a href="javascript:void(0);" onclick="donateNow('project2');" class="w3-button w3-black">Donate Now</a></p>
+  </div>
+</div>
+
+<!-- Donation Card: Project 3 -->
+<div class="donation-card" id="project3">
+  <h4>Literacy and Early Childhood Education</h4>
+  <p>Contribute to projects that promote early childhood education and literacy. Your donation can support reading programs, learning materials, and educational resources for young learners.  </p>
+  <div class="donation-progress">
+    <div class="progress-bar">45%</div>
+  </div>
+  <p><strong>Amount Raised: ₹450000 / ₹1000000</strong></p>
+  <p><a href="javascript:void(0);" onclick="donateNow('project3');" class="w3-button w3-black">Donate Now</a></p>
+</div>
+</div>
+
+<!-- Donation Card: Project 4 -->
+<div class="donation-card" id="project4">
+  <h4>Special Needs and Inclusive Education</h4>
+  <p>Contribute to initiatives that promote inclusive education for students with special needs. Your donation supports resources, accommodations, and specialized programs.  </p>
+  <div class="donation-progress">
+    <div class="progress-bar">75%</div>
+  </div>
+  <p><strong>Amount Raised: ₹750000 / ₹1000000</strong></p>
+  <p><a href="javascript:void(0);" onclick="donateNow('project4');" class="w3-button w3-black">Donate Now</a></p>
+</div>
+</div>
+
+<!-- Donation Card: Project 5 -->
+<div class="donation-card" id="project5">
+  <h4>Critical Thinking and Problem-Solving Initiatives:</h4>
+  <p>Donate to projects that focus on enhancing critical thinking, problem-solving skills, and creativity in students of all ages.</p>
+  <div class="donation-progress">
+    <div class="progress-bar">35%</div>
+  </div>
+  <p><strong>Amount Raised: ₹350000 / ₹1000000</strong></p>
+  <p><a href="javascript:void(0);" onclick="donateNow('project5');" class="w3-button w3-black">Donate Now</a></p>
+</div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+ 
+
+
+</body>
+</html>
