@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Donation Tracker</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/* ... Your existing styles ... */
+
+/* New Styles for Donation Tracker */
+.donation-card {
+  padding: 16px;
+  margin: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.donation-card h4 {
+  margin-top: 0;
+}
+
+.donation-card p {
+  margin: 8px 0;
+}
+
+.donation-progress {
+  height: 20px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.donation-progress .progress-bar {
+  height: 100%;
+  width: 50%; /* Change this value based on donation progress */
+  background-color: #4caf50;
+  text-align: center;
+  color: #fff;
+  line-height: 20px;
+  border-radius: 10px;
+}
+
+</style>
+
+<script>
+    function donateNow(projectId) {
+      var donationAmount = parseFloat(prompt("Enter donation amount:"));
+      if (!isNaN(donationAmount)) {
+        var element = document.getElementById(projectId);
+        var progressElement = element.querySelector(".donation-progress .progress-bar");
+        var maxAmount = parseFloat(progressElement.textContent.match(/\d+/)[0]); // Extracting the maximum amount from progress text
+        var donationPercentage = (donationAmount / maxAmount) * 100;
+        if (donationPercentage > 100) {
+          donationPercentage = 100; // Limit percentage to 100 if exceeded
+        }
+        progressElement.style.width = donationPercentage + "%"; // Update progress bar width
+        var offset = element.offsetTop;
+        window.scrollTo(0, offset);
+      }
+    }
+    </script>
+    
+</head>
+<body>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="#gallery" class="w3-bar-item w3-button"><i class="fa fa-th"></i> GALLERY</a>
+        <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+        <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+<!-- ... Your existing content ... -->
+
+<!-- Donation Tracker Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="donations">
+  <h3 class="w3-center">DONATION TRACKER</h3>
+  <p class="w3-center w3-large">Track contributions and their impact</p>
+
+  <!-- Donation Card: Project 1 -->
+  <div class="donation-card" id="project1">
+    <h4>Project 1: Clean Water Initiative</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod bibendum enim, vel auctor lorem blandit at.</p>
+    <div class="donation-progress">
+      <div class="progress-bar">50%</div>
+    </div>
+    <p><strong>Amount Raised: $5000 / $10000</strong></p>
+    <p><a href="javascript:void(0);" onclick="donateNow('project1');" class="w3-button w3-black">Donate Now</a></p>
+  </div>
+
+  <!-- Donation Card: Project 2 -->
+  <div class="donation-card" id="project2">
+    <h4>Project 2: Education for All</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod bibendum enim, vel auctor lorem blandit at.</p>
+    <div class="donation-progress">
+      <div class="progress-bar">30%</div>
+    </div>
+    <p><strong>Amount Raised: $3000 / $10000</strong></p>
+    <p><a href="javascript:void(0);" onclick="donateNow('project2');" class="w3-button w3-black">Donate Now</a></p>
+  </div>
+</div>
+
+<!-- ... Your existing content ... -->
+
+</body>
+</html>
