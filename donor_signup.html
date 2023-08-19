@@ -110,7 +110,7 @@
         <div class="col-md-4 inputGroupContainer">
         <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-      <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+      <input name="email" id="email" onkeyup="validateEmail(this)" placeholder="E-Mail Address" class="form-control"  type="text">
         </div>
       </div>
     </div>
@@ -145,5 +145,21 @@
     </form>
     </div>
         </div><!-- /.container -->
+        <script>
+          function validateEmail(input) {
+            const emailRegex = /^[a-z]+@+gmail.com$/;
+              const message = document.getElementById('email-message');
+  
+              if (emailRegex.test(input.value)) {
+                  input.style.border = '2px solid green';
+                  message.innerText = 'Valid email address';
+                  message.style.color = 'green';
+              } else {
+                  input.style.border = '2px solid red';
+                  message.innerText = 'Invalid email address';
+                  message.style.color = 'red';
+              }
+          }
+      </script>
 </body>
 </html>
