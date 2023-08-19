@@ -68,7 +68,10 @@ button {
 }
 
 
-
+a{
+    text-decoration: none;
+    color: #222;
+}
 
 
 /* Styles for the additional boxes */
