@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/category4.css">
+<link rel="stylesheet" href="css/category.css">
 <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
@@ -15,13 +15,15 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+    <a href="index.html#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#gallery" class="w3-bar-item w3-button"><i class="fa fa-th"></i> GALLERY</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="./category.html" class="w3-bar-item w3-button">DONATE</a>
+      <a href="index.html#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="index.html#cause" class="w3-bar-item w3-button"></i> CAUSES</a>
+      <a href="index.html#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="index.html#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="./login.html" class="w3-bar-item w3-button">LOGIN/SIGNUP</a>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -34,89 +36,90 @@
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#cause" onclick="w3_close()" class="w3-bar-item w3-button">CAUSE</a>
-  <a href="#gallery" onclick="w3_close()" class="w3-bar-item w3-button">GALLERY</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="category.html" onclick="w3_close()" class="w3-bar-item w3-button">DONATE</a>
+  <a href="index.html#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="index.html#cause" onclick="w3_close()" class="w3-bar-item w3-button">CAUSE</a>
+  <a href="index.html#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="index.html#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="./login.html" onclick="w3_close()" class="w3-bar-item w3-button">LOGIN</a>
 </nav>
 
 <div class="content-wrapper">
     <h1 class="heading">CATEGORIES</h1>
     <div class="news-card">
       <a href="#" class="news-card__card-link"></a>
-      <img src="https://satyarthi.org.in/wp-content/uploads/2021/09/girl-student_6139ecd847750.jpg" alt="" class="news-card__image">
+      <img src="/images/education.jpg" alt="" class="news-card__image">
       <div class="news-card__text-wrapper">
         <h2 class="news-card__title">Education Enrichment</h2>
-        <div class="news-card__post-date">Jan 29, 2018</div>
+        <!-- <div class="news-card__post-date">Jan 29, 2018</div> -->
         <div class="news-card__details-wrapper">
-          <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia iure architecto deserunt distinctio, pariatur&hellip;</p>
-          <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+          <p class="news-card__excerpt">Empower the future with the gift of education. Your donation today fuels knowledge and unlocks opportunities for lifelong enrichment.</p>
+          <!-- <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a> -->
         </div>
       </div>
     </div>
   
     <div class="news-card">
       <a href="#" class="news-card__card-link"></a>
-      <img src="https://images.pexels.com/photos/631954/pexels-photo-631954.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image">
+      <img src="/images/emergency_relief.png" alt="" class="news-card__image">
       <div class="news-card__text-wrapper">
         <h2 class="news-card__title">Emergency Relief</h2>
-        <div class="news-card__post-date">Jan 29, 2018</div>
+        <!-- <div class="news-card__post-date">Jan 29, 2018</div> -->
         <div class="news-card__details-wrapper">
-          <p class="news-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam obcaecati ex natus nulla rem sequi laborum quod fugit&hellip;</p>
-          <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+          <p class="news-card__excerpt">Extend your hand to those in need. Your contribution brings hope and immediate relief in times of crisis.</p>
+          <!-- <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a> -->
         </div>
       </div>
     </div>
   
     <div class="news-card">
       <a href="#" class="news-card__card-link"></a>
-      <img src="https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="news-card__image">
+      <img src="/images/healthcare.jpg" alt="" class="news-card__image">
       <div class="news-card__text-wrapper">
         <h2 class="news-card__title">Healthcare Access</h2>
-        <div class="news-card__post-date">Jan 29, 2018</div>
+        <!-- <div class="news-card__post-date">Jan 29, 2018</div> -->
         <div class="news-card__details-wrapper">
-          <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis beatae&hellip;</p>
-          <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+          <p class="news-card__excerpt">"Promote healthier lives for all. Your support enables vital healthcare access, ensuring well-being and a brighter tomorrow."</p>
+          <!-- <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a> -->
         </div>
       </div>
     </div>
   
     <div class="news-card">
       <a href="#" class="news-card__card-link"></a>
-      <img src="https://images.pexels.com/photos/248486/pexels-photo-248486.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image">
+      <img src="/images/environmental_protection.png" alt="" class="news-card__image">
       <div class="news-card__text-wrapper">
         <h2 class="news-card__title">Environmental Conservation</h2>
-        <div class="news-card__post-date">Jan 29, 2018</div>
+        <!-- <div class="news-card__post-date">Jan 29, 2018</div> -->
         <div class="news-card__details-wrapper">
-          <p class="news-card__excerpt">Lorem ipsum dolor sit amet!</p>
-          <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+          <p class="news-card__excerpt">Champion the planet's preservation. With your donation, we safeguard ecosystems and foster a sustainable world for generations to come.</p>
+          <!-- <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a> -->
         </div>
       </div>
     </div>
   
     <div class="news-card">
       <a href="#" class="news-card__card-link"></a>
-      <img src="https://images.pexels.com/photos/206660/pexels-photo-206660.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image">
+      <img src="/images/disability_inclusion.jpg" alt="" class="news-card__image">
       <div class="news-card__text-wrapper">
         <h2 class="news-card__title">Disablity Inclusion</h2>
-        <div class="news-card__post-date">Jan 29, 2018</div>
+        <!-- <div class="news-card__post-date">Jan 29, 2018</div> -->
         <div class="news-card__details-wrapper">
-          <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia iure architecto deserunt distinctio&hellip;</p>
-          <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+          <p class="news-card__excerpt">Embrace diversity and inclusivity. By donating, you promote a world where every individual's abilities shine, fostering a more equitable and empowered society.</p>
+          <!-- <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a> -->
         </div>
       </div>
     </div>
   
     <div class="news-card">
       <a href="#" class="news-card__card-link"></a>
-      <img src="https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image">
+      <img src="images/womene.jpeg" alt="" class="news-card__image">
       <div class="news-card__text-wrapper">
         <h2 class="news-card__title">Women's Empowerment</h2>
-        <div class="news-card__post-date">Jan 29, 2018</div>
+        <!-- <div class="news-card__post-date">Jan 29, 2018</div> -->
         <div class="news-card__details-wrapper">
-          <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est pariatur nemo tempore repellat? Ullam sed officia.</p>
-          <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+          <p class="news-card__excerpt">Empower change through women's upliftment. Your contribution fuels equality, education, and opportunities, creating a future where every woman's potential knows no bounds.</p>
+          <!-- <a href="#" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a> -->
         </div>
       </div>
     </div>
